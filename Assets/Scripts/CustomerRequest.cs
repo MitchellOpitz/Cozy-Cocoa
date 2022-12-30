@@ -12,6 +12,7 @@ public class CustomerRequest : MonoBehaviour
     public AudioClip wrongSound;
 
     public TipTimer tipTimer;
+    public UpdateMoney updateMoney;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class CustomerRequest : MonoBehaviour
         {
             soundEffects.PlaySound(correctSound);
             int tip = CalculateTip();
-            Debug.Log("Earned tip: " + tip);
+            updateMoney.AddMoney(5 + tip);
             NewRequest();
         } else
         {
