@@ -7,6 +7,7 @@ public class Clickable : MonoBehaviour
     public SoundEffects soundEffects;
     public AudioClip hoverSound;
     public AudioClip clickSound;
+    public GameObject ingredient;
 
     private void OnMouseEnter()
     {
@@ -16,5 +17,6 @@ public class Clickable : MonoBehaviour
     private void OnMouseDown()
     {
         soundEffects.PlaySound(clickSound);
+        ingredient.SetActive(true);
     }
 }
