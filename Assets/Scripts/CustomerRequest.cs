@@ -7,6 +7,10 @@ public class CustomerRequest : MonoBehaviour
     public GameObject[] cocoaRequested;
     public GameObject[] cocoaMade;
 
+    public SoundEffects soundEffects;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+
     private void Start()
     {
         NewRequest();
@@ -26,12 +30,11 @@ public class CustomerRequest : MonoBehaviour
 
         if (cocoaMatches)
         {
-            Debug.Log("Cocoa made does match request.");
-            Debug.Log("Getting new customer.");
+            soundEffects.PlaySound(correctSound);
             NewRequest();
         } else
         {
-            Debug.Log("Cocoa made does not match request.");
+            soundEffects.PlaySound(wrongSound);
         }
     }
 
