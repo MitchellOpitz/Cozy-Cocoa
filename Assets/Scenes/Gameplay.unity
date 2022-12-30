@@ -965,6 +965,7 @@ MonoBehaviour:
   correctSound: {fileID: 8300000, guid: ebaf3a4defbd5bc4a99edb381d6df3b2, type: 3}
   wrongSound: {fileID: 8300000, guid: a25bbe5f0c2b2e948a478d42b6c5510a, type: 3}
   tipTimer: {fileID: 1358977167}
+  updateMoney: {fileID: 1401367683}
 --- !u!4 &396076628
 Transform:
   m_ObjectHideFlags: 0
