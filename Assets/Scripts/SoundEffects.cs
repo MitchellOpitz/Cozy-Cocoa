@@ -14,8 +14,6 @@ public class SoundEffects : MonoBehaviour
     public void PlaySound(AudioClip soundClip)
     {
         source.clip = soundClip;
-        Debug.Log("Sound clip set to: " + soundClip);
         source.PlayOneShot(soundClip);
-        Debug.Log("Sound clip played: " + soundClip);
     }
 }
