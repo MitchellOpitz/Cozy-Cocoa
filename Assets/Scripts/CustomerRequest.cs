@@ -11,6 +11,8 @@ public class CustomerRequest : MonoBehaviour
     public AudioClip correctSound;
     public AudioClip wrongSound;
 
+    public TipTimer tipTimer;
+
     private void Start()
     {
         NewRequest();
@@ -31,6 +33,8 @@ public class CustomerRequest : MonoBehaviour
         if (cocoaMatches)
         {
             soundEffects.PlaySound(correctSound);
+            int tip = CalculateTip();
+            Debug.Log("Earned tip: " + tip);
             NewRequest();
         } else
         {
@@ -97,6 +101,7 @@ public class CustomerRequest : MonoBehaviour
 
     void ResetRequests()
     {
+        tipTimer.ResetTimer();
         foreach(GameObject go in cocoaRequested)
         {
             go.SetActive(false);
@@ -111,5 +116,21 @@ public class CustomerRequest : MonoBehaviour
     {
         int randomNumber = Random.Range(0, 100);
         return randomNumber;
+    }
+
+    int CalculateTip()
+    {
+        int tipAmount = 0;
+        if (tipTimer.timeRemaining > 0)
+        {
+            if (tipTimer.timeRemaining > (tipTimer.maxTime / 2))
+            {
+                tipAmount = 2;
+            } else
+            {
+                tipAmount = 1;
+            }
+        }
+        return tipAmount;
     }
 }
