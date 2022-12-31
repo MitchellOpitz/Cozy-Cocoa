@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: {fileID: 1339645176}
-  maxTime: 30
+  maxTime: 120
   timeRemaining: 0
 --- !u!1 &1358977165
 GameObject:
