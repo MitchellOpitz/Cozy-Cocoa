@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class GameTimer : MonoBehaviour
         }
         else
         {
-            gameTimer.fillAmount = 0;
+            SceneManager.LoadScene(5);
         }
     }
 }
