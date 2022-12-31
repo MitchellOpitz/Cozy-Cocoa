@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UpdateMoney : MonoBehaviour
 {
     public static int customersServed;
     public static int totalEarned;
     public static int tipsEarned;
-    public Text UItext;
+    public TMP_Text UItext;
 
     private void Start()
     {
