@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UpdateMoney : MonoBehaviour
 {
-    private int totalEarned;
+    public static int totalEarned;
     public Text UItext;
 
     private void Start()
