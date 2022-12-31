@@ -25,6 +25,6 @@ public class UpdateMoney : MonoBehaviour
         {
             tipsEarned += income - 5;
         }
-        UItext.text = "Money: $" + totalEarned;
+        UItext.text = "$" + totalEarned;
     }
 }
